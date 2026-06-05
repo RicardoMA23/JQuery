@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD jQuery | Inventario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">Proyecto jQuery</p>
+        <h1>CRUD de Inventario</h1>
+        <p class="subtitle">
+          Administra productos con operaciones crear, leer, actualizar y eliminar.
+        </p>
+      </header>
+
+      <section class="grid-layout">
+        <article class="panel form-panel">
+          <h2 id="form-title">Nuevo producto</h2>
+          <form id="product-form" autocomplete="off">
+            <input type="hidden" id="product-id" />
+
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="Ej. Teclado mecánico" required />
+
+            <label for="category">Categoría</label>
+            <input type="text" id="category" placeholder="Ej. Accesorios" required />
+
+            <label for="price">Precio</label>
+            <input type="number" id="price" min="0" step="0.01" placeholder="0.00" required />
+
+            <label for="stock">Stock</label>
+            <input type="number" id="stock" min="0" step="1" placeholder="0" required />
+
+            <div class="form-actions">
+              <button type="submit" id="save-btn" class="btn btn-primary">Guardar</button>
+              <button type="button" id="cancel-btn" class="btn btn-muted hidden">Cancelar edición</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="panel table-panel">
+          <div class="table-head">
+            <h2>Lista de productos</h2>
+            <input
+              type="text"
+              id="search"
+              placeholder="Buscar por nombre o categoría"
+              aria-label="Buscar producto"
+            />
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Categoría</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="product-table-body"></tbody>
+            </table>
+          </div>
+
+          <p id="empty-state" class="empty-state">No hay productos registrados.</p>
+        </article>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
