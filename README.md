@@ -2,6 +2,22 @@
 
 Proyecto simple de inventario usando jQuery con operaciones CRUD y persistencia en `localStorage`.
 
+## Validacion del proyecto
+
+Este proyecto es estatico, por lo que no existe una compilacion tradicional.
+Para validar si "pasa o no pasa" ahora se usan chequeos reales con herramientas de calidad:
+
+- ESLint para JavaScript
+- HTMLHint para HTML
+- Stylelint para CSS
+
+Comandos:
+
+1. Instalar dependencias: `npm.cmd install`
+2. Ejecutar validacion completa: `npm.cmd run validate`
+
+Si algun chequeo falla, veras el motivo exacto (archivo, linea y regla).
+
 ## Funcionalidades
 
 - Crear productos
@@ -26,4 +42,4 @@ Proyecto simple de inventario usando jQuery con operaciones CRUD y persistencia 
 
 ## Nota
 
-No requiere backend ni instalacion de dependencias, porque usa jQuery por CDN.
+No requiere backend. jQuery se carga por CDN, pero la validacion local si requiere instalar dependencias de desarrollo.

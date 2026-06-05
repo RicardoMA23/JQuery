@@ -1,0 +1,18 @@
+{
+  "name": "jquery-crud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CRUD con jQuery con validacion de calidad para proyecto estatico",
+  "scripts": {
+    "validate": "npm run validate:js && npm run validate:html && npm run validate:css",
+    "validate:js": "eslint js/**/*.js",
+    "validate:html": "htmlhint index.html",
+    "validate:css": "stylelint \"css/**/*.css\""
+  },
+  "devDependencies": {
+    "eslint": "^9.30.1",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.23.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}
